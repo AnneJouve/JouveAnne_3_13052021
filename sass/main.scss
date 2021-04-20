@@ -1,0 +1,283 @@
+@import "./utils/variables";
+
+@import "./utils/mixins";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: $font-thin;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000;
+}
+/*HEADER*/
+.header {
+    margin: 8% 0 2% 0;
+    &__return-arrow {
+        @include return-arrow;
+    }
+    &__logo {
+        text-align: center;
+    }
+    &__logo img {
+        width: 45%;
+    }
+}
+ /*header menus*/
+.header-menu {
+    margin: 8% 0 2% 0;
+    &__return-arrow {
+        @include return-arrow($display: block);
+    }
+    &__logo {
+        text-align: center;
+    }
+    &__logo img {
+        width: 45%;
+    }
+}
+
+/*SECTION AREA*/
+.section-area {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(#cfcfcf 2%, #eaeaea 20%);
+    &__text {
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        }
+        &__text i {
+        padding-right: 15px;
+        }
+}
+
+/*SECTION PRÉSENTATION*/
+.section-presentation {
+    @include section($align: center);
+    &__heading {
+        @include section-heading;
+    }
+    &__text {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+}
+.btn-gradient {
+    color: #FFF;
+    font-weight: $font-regular;
+    line-height: 1.2rem;
+    background: linear-gradient($color-secondary, $color-primary 95%);
+    padding: 1rem;
+    border-radius: 40px;
+    width: 15rem;
+    margin: auto;
+    text-align: center;
+}
+/*SECTION FONCTIONNEMENT*/
+.section-fonctionnement {
+    @include section($background: #FFF);
+    &__heading {
+        @include section-heading;
+    }
+}
+.section-choice {
+    &__number {
+        font-size: 0.9rem;
+        position: relative;
+        background: $color-primary;
+        border-radius: 50%;
+        z-index: 1;
+        color: #FFF;
+        width: 1.8rem;
+        text-align: center;
+        top: 45px;
+        left: -6px;
+        font-weight: $font-thin;
+    }
+    &__rounded-block {
+        @include round-box-shadow;
+        font-weight: $font-medium;
+        background: $color-background-grey;
+        padding: 1.3rem;
+        text-align: center;
+        line-height: 1.2rem;
+        i {
+            margin-right: 15px;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.2rem;
+        }
+    }
+}
+/*SECTION RESTAURANTS*/
+.section-restaurants {
+    @include section;
+    &__heading {
+        @include section-heading;
+    }
+}
+.restaurant-card {
+    @include round-box-shadow;
+    position: relative;
+    margin-bottom: 8%;
+    &__image1 {
+        @include background-image;
+        background-image: url(/images/restaurants/small/jay-wennington-N_Y88TWmGwA-unsplash-767px.jpg);
+    }
+    &__image2 {
+        @include background-image;
+        background-image: url(/images/restaurants/small/stil-u2Lp8tXIcjw-unsplash-767px.jpg);
+    }
+    &__image3 {
+        @include background-image;
+        background-image: url(/images/restaurants/small/toa-heftiba-DQKerTsQwi0-unsplash-767px.jpg);
+    }
+    &__image4 {
+        @include background-image;
+        background-image: url(/images/restaurants/small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-767px.jpg);
+    }
+    &__sticker {
+        background: $color-tertiary;
+        color: #6ab8a5;
+        font-weight: $font-medium;
+        padding: 5px;
+        border-radius: 0.3rem;
+        width: 6rem;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        left: 68%;
+    }
+    &__legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+            padding:2% 0 4% 3%;
+        }
+        
+        .icon {
+            padding-right: 10%;
+            font-size: 1.5rem;
+        }
+        .bold {
+            font-weight: $font-medium;
+        }
+    }
+ }
+ /*FOOTER*/
+ .footer {
+    background: #353535;
+    padding: 25px 20px 30px 20px;
+    ul {
+        list-style-type: none; 
+    }
+    a {
+        color: #FFF;
+        font-weight: $font-thin;  
+    }
+    i {
+        margin-right: 10px;
+        font-size: 0.8rem;  
+    }
+    &__image {
+        width: 6rem;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/*footer menus*/
+.footer-menu {
+    background: #353535;
+    padding: 25px 20px 30px 20px;
+    position: relative;
+    ul {
+        list-style-type: none; 
+    }
+    a {
+        color: #FFF;
+        font-weight: $font-thin;  
+    }
+    i {
+        margin-right: 10px;
+        font-size: 0.8rem;  
+    }
+    &__image {
+        width: 6rem;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+        }
+    }
+}
+/*PAGE MENU*/
+.banner {
+    margin: 0 -20px 0 -20px;
+    img {
+    width: 100%;
+    height: 276px;
+    object-fit: cover;
+    }
+}
+.section-menu {
+    @include section;
+    border-radius: 40px 40px 0 0;
+    width: 100%;
+    position: relative;
+    top: -65px;
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        font-size: 1.8rem;
+    }
+}
+
+.card-menu {
+    &__heading {
+        font-weight: $font-light;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-top: 30px;
+        &--border {
+            border-bottom: 3px solid $color-tertiary;
+        }
+    }
+}
+.card-menu-dish {
+    @include round-box-shadow;
+    background: #FFF;
+    padding: 15px 20px 10px 10px;
+    margin: 15px 0 15px 0;
+    &__title {
+        font-weight: $font-medium;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    &__seasoning {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+    }
+    &__price {
+        font-weight: $font-medium;
+    }
+}

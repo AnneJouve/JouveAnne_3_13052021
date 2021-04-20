@@ -1,0 +1,33 @@
+@mixin return-arrow($display: none) {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 8%;
+    display: $display;
+}
+
+@mixin section($background: $color-background-grey, $align: left) {
+    padding: 40px 20px 60px 20px;
+    background: $background;
+    text-align: $align;
+}
+
+@mixin section-heading {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    margin-bottom: 12px;
+}
+
+@mixin round-box-shadow {
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px $color-shadow;
+    width: 100%;
+}
+
+@mixin background-image {
+    background-size: cover;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    height: 180px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
