@@ -270,6 +270,11 @@ a {
   width: 100%;
 }
 
+/*MAIN*/
+.main-menu {
+  margin-bottom: -65px;
+}
+
 /*PAGE MENU*/
 .banner {
   margin: 0 -20px 0 -20px;
