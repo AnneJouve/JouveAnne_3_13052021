@@ -132,19 +132,19 @@ a {
     margin-bottom: 8%;
     &__image1 {
         @include background-image;
-        background-image: url(/images/restaurants/small/jay-wennington-N_Y88TWmGwA-unsplash-767px.jpg);
+        background-image: url(/images/restaurants/small/jay-wennington-767px.jpg);
     }
     &__image2 {
         @include background-image;
-        background-image: url(/images/restaurants/small/stil-u2Lp8tXIcjw-unsplash-767px.jpg);
+        background-image: url(/images/restaurants/small/stil-767px.jpg);
     }
     &__image3 {
         @include background-image;
-        background-image: url(/images/restaurants/small/toa-heftiba-DQKerTsQwi0-unsplash-767px.jpg);
+        background-image: url(/images/restaurants/small/toa-heftiba-767px.jpg);
     }
     &__image4 {
         @include background-image;
-        background-image: url(/images/restaurants/small/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-767px.jpg);
+        background-image: url(/images/restaurants/small/louis-hansel-767px.jpg);
     }
     &__sticker {
         background: $color-tertiary;
