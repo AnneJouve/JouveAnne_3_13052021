@@ -1,0 +1,13 @@
+.btn-gradient {
+    color: #FFF;
+    font-weight: $font-regular;
+    font-size: 1rem;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    padding: 1rem;
+    border-radius: 40px;
+    width: 14rem;
+    margin: 30px auto;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px $color-shadow;
+    text-align: center;
+}

@@ -1,0 +1,114 @@
+.section-area {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(#cfcfcf 2%, #eaeaea 20%);
+    &__text {
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: 500;
+        }
+        &__text i {
+        padding-right: 15px;
+        }
+}
+
+.section-presentation {
+    @include section($align: center);
+    &__heading {
+        @include section-heading;
+    }
+    &__text {
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+}
+.section-fonctionnement {
+    @include section($background: #FFF);
+    &__heading {
+        @include section-heading;
+    }
+}
+.section-choice {
+    &__number {
+        font-size: 0.9rem;
+        position: relative;
+        background: $color-primary;
+        border-radius: 50%;
+        z-index: 1;
+        color: #FFF;
+        width: 1.8rem;
+        text-align: center;
+        top: 45px;
+        left: -6px;
+        font-weight: $font-thin;
+    }
+    &__rounded-block {
+        @include round-box-shadow;
+        font-weight: $font-medium;
+        background: $color-background-grey;
+        padding: 1.3rem;
+        text-align: center;
+        line-height: 1.2rem;
+        i {
+            margin-right: 15px;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 1.2rem;
+        }
+    }
+}
+/*SECTION RESTAURANTS*/
+.section-restaurants {
+    @include section;
+    &__heading {
+        @include section-heading;
+    }
+}
+.restaurant-card {
+    @include round-box-shadow;
+    margin-bottom: 8%;
+    &__image1 {
+        @include background-image;
+        background-image: url(../images/restaurants/small/jay-wennington-767px.jpg);
+    }
+    &__image2 {
+        @include background-image;
+        background-image: url(../images/restaurants/small/stil-767px.jpg);
+    }
+    &__image3 {
+        @include background-image;
+        background-image: url(../images/restaurants/small/toa-heftiba-767px.jpg);
+    }
+    &__image4 {
+        @include background-image;
+        background-image: url(../images/restaurants/small/louis-hansel-767px.jpg);
+    }
+    &__sticker {
+        background: $color-tertiary;
+        color: #6ab8a5;
+        font-weight: $font-medium;
+        padding: 5px;
+        border-radius: 0.3rem;
+        width: 35%;
+        text-align: center;
+        position: relative;
+        top: 7%;
+        left: 62%;
+    }
+    &__legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text {
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+            padding:2% 0 4% 3%;
+        }
+        
+        .icon {
+            padding-right: 10%;
+            font-size: 1.5rem;
+        }
+        .bold {
+            font-weight: $font-medium;
+        }
+    }
+ }

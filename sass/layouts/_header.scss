@@ -1,0 +1,18 @@
+.header, .header-menu {
+    margin: 8% 0 2% 0;
+    &__return-arrow {
+        @include return-arrow;
+    }
+    &__logo {
+        text-align: center;
+    }
+    &__logo img {
+        width: 45%;
+    }
+}
+
+.header-menu {
+    &__return-arrow {
+        @include return-arrow($display: block);
+    }
+}

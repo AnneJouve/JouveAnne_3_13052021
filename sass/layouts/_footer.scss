@@ -1,0 +1,22 @@
+.footer, .footer-menu {
+    background: #353535;
+    padding: 25px 20px 30px 20px;
+    ul {
+        list-style-type: none; 
+    }
+    a {
+        color: #FFF;
+        font-weight: $font-thin;  
+    }
+    i {
+        margin-right: 10px;
+        font-size: 0.8rem;  
+    }
+    &__image {
+        width: 6rem;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+        }
+    }
+}
