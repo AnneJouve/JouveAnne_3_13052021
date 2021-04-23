@@ -6,7 +6,7 @@
 }
 
 @mixin section($background: $color-background-grey, $align: left) {
-    padding: 40px 20px 60px 20px;
+    padding: 40px 20px 30px 20px;
     background: $background;
     text-align: $align;
 }

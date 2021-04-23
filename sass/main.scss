@@ -22,7 +22,7 @@ a {
     color: #000;
 }
 /*HEADER*/
-.header {
+.header, .header-menu {
     margin: 8% 0 2% 0;
     &__return-arrow {
         @include return-arrow;
@@ -36,15 +36,8 @@ a {
 }
  /*header menus*/
 .header-menu {
-    margin: 8% 0 2% 0;
     &__return-arrow {
         @include return-arrow($display: block);
-    }
-    &__logo {
-        text-align: center;
-    }
-    &__logo img {
-        width: 45%;
     }
 }
 
@@ -76,12 +69,14 @@ a {
 .btn-gradient {
     color: #FFF;
     font-weight: $font-regular;
-    line-height: 1.2rem;
-    background: linear-gradient($color-secondary, $color-primary 95%);
+    font-size: 1rem;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
     padding: 1rem;
     border-radius: 40px;
-    width: 15rem;
-    margin: auto;
+    width: 14rem;
+    margin: 30px auto;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px $color-shadow;
     text-align: center;
 }
 /*SECTION FONCTIONNEMENT*/
@@ -155,7 +150,7 @@ a {
         text-align: center;
         position: relative;
         top: 7%;
-        left: 60%;
+        left: 62%;
     }
     &__legend {
         display: flex;
@@ -177,34 +172,9 @@ a {
     }
  }
  /*FOOTER*/
- .footer {
+ .footer, .footer-menu {
     background: #353535;
     padding: 25px 20px 30px 20px;
-    ul {
-        list-style-type: none; 
-    }
-    a {
-        color: #FFF;
-        font-weight: $font-thin;  
-    }
-    i {
-        margin-right: 10px;
-        font-size: 0.8rem;  
-    }
-    &__image {
-        width: 6rem;
-        margin-bottom: 10px;
-        img {
-            width: 100%;
-        }
-    }
-}
-
-/*footer menus*/
-.footer-menu {
-    background: #353535;
-    padding: 25px 20px 30px 20px;
-    position: relative;
     ul {
         list-style-type: none; 
     }

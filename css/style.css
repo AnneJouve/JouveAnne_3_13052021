@@ -19,37 +19,28 @@ a {
 }
 
 /*HEADER*/
-.header {
+.header, .header-menu {
   margin: 8% 0 2% 0;
 }
-.header__return-arrow {
+.header__return-arrow, .header-menu__return-arrow {
   font-size: 1.2rem;
   position: absolute;
   left: 8%;
   display: none;
 }
-.header__logo {
+.header__logo, .header-menu__logo {
   text-align: center;
 }
-.header__logo img {
+.header__logo img, .header-menu__logo img {
   width: 45%;
 }
 
 /*header menus*/
-.header-menu {
-  margin: 8% 0 2% 0;
-}
 .header-menu__return-arrow {
   font-size: 1.2rem;
   position: absolute;
   left: 8%;
   display: block;
-}
-.header-menu__logo {
-  text-align: center;
-}
-.header-menu__logo img {
-  width: 45%;
 }
 
 /*SECTION AREA*/
@@ -68,7 +59,7 @@ a {
 
 /*SECTION PRÉSENTATION*/
 .section-presentation {
-  padding: 40px 20px 60px 20px;
+  padding: 40px 20px 30px 20px;
   background: #F6F6F6;
   text-align: center;
 }
@@ -85,18 +76,20 @@ a {
 .btn-gradient {
   color: #FFF;
   font-weight: 400;
-  line-height: 1.2rem;
-  background: linear-gradient(#FF79DA, #9356DC 95%);
+  font-size: 1rem;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   padding: 1rem;
   border-radius: 40px;
-  width: 15rem;
-  margin: auto;
+  width: 14rem;
+  margin: 30px auto;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #D0D0D0;
   text-align: center;
 }
 
 /*SECTION FONCTIONNEMENT*/
 .section-fonctionnement {
-  padding: 40px 20px 60px 20px;
+  padding: 40px 20px 30px 20px;
   background: #FFF;
   text-align: left;
 }
@@ -137,7 +130,7 @@ a {
 
 /*SECTION RESTAURANTS*/
 .section-restaurants {
-  padding: 40px 20px 60px 20px;
+  padding: 40px 20px 30px 20px;
   background: #F6F6F6;
   text-align: left;
 }
@@ -199,7 +192,7 @@ a {
   text-align: center;
   position: relative;
   top: 7%;
-  left: 60%;
+  left: 62%;
 }
 .restaurant-card__legend {
   display: flex;
@@ -220,51 +213,26 @@ a {
 }
 
 /*FOOTER*/
-.footer {
+.footer, .footer-menu {
   background: #353535;
   padding: 25px 20px 30px 20px;
 }
-.footer ul {
+.footer ul, .footer-menu ul {
   list-style-type: none;
 }
-.footer a {
+.footer a, .footer-menu a {
   color: #FFF;
   font-weight: 100;
 }
-.footer i {
+.footer i, .footer-menu i {
   margin-right: 10px;
   font-size: 0.8rem;
 }
-.footer__image {
+.footer__image, .footer-menu__image {
   width: 6rem;
   margin-bottom: 10px;
 }
-.footer__image img {
-  width: 100%;
-}
-
-/*footer menus*/
-.footer-menu {
-  background: #353535;
-  padding: 25px 20px 30px 20px;
-  position: relative;
-}
-.footer-menu ul {
-  list-style-type: none;
-}
-.footer-menu a {
-  color: #FFF;
-  font-weight: 100;
-}
-.footer-menu i {
-  margin-right: 10px;
-  font-size: 0.8rem;
-}
-.footer-menu__image {
-  width: 6rem;
-  margin-bottom: 10px;
-}
-.footer-menu__image img {
+.footer__image img, .footer-menu__image img {
   width: 100%;
 }
 
@@ -284,7 +252,7 @@ a {
 }
 
 .section-menu {
-  padding: 40px 20px 60px 20px;
+  padding: 40px 20px 30px 20px;
   background: #F6F6F6;
   text-align: left;
   border-radius: 40px 40px 0 0;
