@@ -228,41 +228,41 @@ a {
   width: 100%;
   margin-bottom: 8%;
 }
-.restaurant-card__image1 {
+.restaurant-card__imagePalette {
   background-size: cover;
   background-position: 50% 60%;
   background-repeat: no-repeat;
   height: 180px;
   border-radius: 20px 20px 0 0;
   position: relative;
-  background-image: url(../images/restaurants/small/jay-wennington-767px.jpg);
+  background-image: url(../images/restaurants/restaurant-palette-du-gout.jpg);
 }
-.restaurant-card__image2 {
+.restaurant-card__imageNote {
   background-size: cover;
   background-position: 50% 60%;
   background-repeat: no-repeat;
   height: 180px;
   border-radius: 20px 20px 0 0;
   position: relative;
-  background-image: url(../images/restaurants/small/stil-767px.jpg);
+  background-image: url(../images/restaurants/restaurant-la-note-enchantee.jpg);
 }
-.restaurant-card__image3 {
+.restaurant-card__imageFrancaise {
   background-size: cover;
   background-position: 50% 60%;
   background-repeat: no-repeat;
   height: 180px;
   border-radius: 20px 20px 0 0;
   position: relative;
-  background-image: url(../images/restaurants/small/toa-heftiba-767px.jpg);
+  background-image: url(../images/restaurants/restaurant-a-la-francaise.jpg);
 }
-.restaurant-card__image4 {
+.restaurant-card__imageDelice {
   background-size: cover;
   background-position: 50% 60%;
   background-repeat: no-repeat;
   height: 180px;
   border-radius: 20px 20px 0 0;
   position: relative;
-  background-image: url(../images/restaurants/small/louis-hansel-767px.jpg);
+  background-image: url(../images/restaurants/restaurant-delice-des-sens.jpg);
 }
 .restaurant-card__sticker {
   background: #99E2D0;

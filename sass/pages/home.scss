@@ -65,21 +65,21 @@
 .restaurant-card {
     @include round-box-shadow;
     margin-bottom: 8%;
-    &__image1 {
+    &__imagePalette {
         @include background-image;
-        background-image: url(../images/restaurants/small/jay-wennington-767px.jpg);
+        background-image: url(../images/restaurants/restaurant-palette-du-gout.jpg);
     }
-    &__image2 {
+    &__imageNote {
         @include background-image;
-        background-image: url(../images/restaurants/small/stil-767px.jpg);
+        background-image: url(../images/restaurants/restaurant-la-note-enchantee.jpg);
     }
-    &__image3 {
+    &__imageFrancaise {
         @include background-image;
-        background-image: url(../images/restaurants/small/toa-heftiba-767px.jpg);
+        background-image: url(../images/restaurants/restaurant-a-la-francaise.jpg);
     }
-    &__image4 {
+    &__imageDelice {
         @include background-image;
-        background-image: url(../images/restaurants/small/louis-hansel-767px.jpg);
+        background-image: url(../images/restaurants/restaurant-delice-des-sens.jpg);
     }
     &__sticker {
         background: $color-tertiary;
