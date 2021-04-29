@@ -1,3 +1,4 @@
+/*MEDIA QUERIES*/
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,7 @@ a {
   color: #FFF;
   font-weight: 400;
   font-size: 1rem;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA 5%, #9356DC 95%);
   padding: 1rem;
   border-radius: 40px;
   width: 14rem;
@@ -29,6 +30,28 @@ a {
   cursor: pointer;
   box-shadow: 3px 3px 3px #D0D0D0;
   text-align: center;
+  transform: scale(1);
+  transition: transform 200ms;
+  position: relative;
+}
+.btn-gradient:hover {
+  transform: scale(1.03);
+}
+.btn-gradient:hover::after {
+  opacity: 1;
+}
+.btn-gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(#ff93e1 5%, #a16be0 95%);
+  opacity: 0;
+  z-index: -1;
+  border-radius: 40px;
+  box-shadow: 8px 6px 1px #D0D0D0;
 }
 
 .header, .header-menu {
@@ -100,7 +123,7 @@ a {
 .card-menu-dish {
   border-radius: 20px;
   box-shadow: 3px 3px 3px #D0D0D0;
-  width: 100%;
+  /*width: 100%;*/
   background: #FFF;
   padding: 15px 20px 10px 10px;
   margin: 15px 0 15px 0;
@@ -171,6 +194,7 @@ a {
 }
 
 .section-fonctionnement {
+  margin-bottom: 15px;
   padding: 40px 20px 30px 20px;
   background: #FFF;
   text-align: left;
@@ -181,6 +205,19 @@ a {
   margin-bottom: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .choice-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+.section-choice {
+  margin: -25px 0 20px 0;
+}
 .section-choice__number {
   font-size: 0.9rem;
   position: relative;
@@ -197,12 +234,21 @@ a {
 .section-choice__rounded-block {
   border-radius: 20px;
   box-shadow: 3px 3px 3px #D0D0D0;
-  width: 100%;
+  /*width: 100%;*/
   font-weight: 500;
   background: #F6F6F6;
   padding: 1.3rem;
   text-align: center;
   line-height: 1.2rem;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.section-choice__rounded-block:hover {
+  background: rgba(147, 86, 220, 0.2);
+  transform: scale(1.03);
+}
+.section-choice__rounded-block:hover i {
+  color: #9356DC;
 }
 .section-choice__rounded-block i {
   margin-right: 15px;
@@ -222,11 +268,22 @@ a {
   margin-bottom: 12px;
 }
 
+@media screen and (min-width: 768px) {
+  .cards-flex {
+    display: flex;
+  }
+}
+
 .restaurant-card {
   border-radius: 20px;
   box-shadow: 3px 3px 3px #D0D0D0;
-  width: 100%;
+  /*width: 100%;*/
   margin-bottom: 8%;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.restaurant-card:hover {
+  transform: scale(1.03);
 }
 .restaurant-card__imagePalette {
   background-size: cover;

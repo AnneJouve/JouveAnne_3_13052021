@@ -22,12 +22,23 @@
     }
 }
 .section-fonctionnement {
+    margin-bottom: 15px;
     @include section($background: #FFF);
     &__heading {
         @include section-heading;
     }
 }
+.choice-flex {
+    @include responsive(medium-device) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 100%;
+        align-items: flex-start;
+    }
+}
 .section-choice {
+    margin: -25px 0 20px 0;
     &__number {
         font-size: 0.9rem;
         position: relative;
@@ -48,6 +59,15 @@
         padding: 1.3rem;
         text-align: center;
         line-height: 1.2rem;
+        transform: scale(1);
+        transition: transform 200ms;
+        &:hover {
+            background: rgba(147, 86, 220, 0.2);
+            transform: scale(1.03);
+        }
+        &:hover i {
+            color: $color-primary;
+        }
         i {
             margin-right: 15px;
             color: rgba(0, 0, 0, 0.7);
@@ -62,9 +82,19 @@
         @include section-heading;
     }
 }
+.cards-flex {
+    @include responsive(medium-device) {
+        display: flex;
+    }
+}
 .restaurant-card {
     @include round-box-shadow;
     margin-bottom: 8%;
+    transform: scale(1);
+    transition: transform 200ms;
+    &:hover {
+        transform: scale(1.03);
+    }
     &__imagePalette {
         @include background-image;
         background-image: url(../images/restaurants/restaurant-palette-du-gout.jpg);
