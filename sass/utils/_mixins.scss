@@ -9,18 +9,32 @@
     padding: 40px 20px 30px 20px;
     background: $background;
     text-align: $align;
+    @include desktop-only {
+        padding: 40px;
+    }
+    @include xl-desktop-only {
+        padding: 60px;
+    }
 }
 
 @mixin section-heading {
     font-size: 1.4rem;
     line-height: 1.8rem;
     margin-bottom: 12px;
+    @include tablet-only {
+        margin-bottom: 25px;
+    }
+    @include desktop-only {
+        margin-bottom: 30px;
+    }
+    @include xl-desktop-only {
+        margin-bottom: 30px;
+    }
 }
 
 @mixin round-box-shadow {
     border-radius: 20px;
     box-shadow: 3px 3px 3px $color-shadow;
-    /*width: 100%;*/
 }
 
 @mixin background-image {
@@ -30,18 +44,35 @@
     height: 180px;
     border-radius: 20px 20px 0 0;
     position: relative;
+    @include tablet-only {
+        background-position: 30% 65%;
+    }
+    @include xl-desktop-only {
+        height: 300px;
+    }
 }
 
 /*MEDIA QUERIES*/
-@mixin responsive($breakpoint) {
-    @if $breakpoint == medium-device {
-        @media screen and (min-width: 768px) {
-            @content
-        };
-    }
-    @if $breakpoint == xlarge-device {
-        @media screen and (min-width: 1200x) {
-            @content
-        };
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
     }
 }
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, mobile) +1px) and (max-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, tablet) +1px) and (max-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+@mixin xl-desktop-only {
+    @media screen and (min-width: map-get($breakpoints, xl-desktop)){
+        @content;
+    }
+} 

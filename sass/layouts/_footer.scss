@@ -1,12 +1,37 @@
 .footer, .footer-menu {
     background: #353535;
     padding: 25px 20px 30px 20px;
+    @include desktop-only {
+        padding: 40px;
+    }
+    @include xl-desktop-only {
+        padding: 40px;
+        border-radius: 0 0 20px 20px;
+    }
     ul {
-        list-style-type: none; 
+        list-style-type: none;
+        @include tablet-only {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include desktop-only {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include xl-desktop-only {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        } 
     }
     a {
         color: #FFF;
-        font-weight: $font-thin;  
+        font-weight: $font-thin;
+        @include tablet-only {
+            display: inline-block;
+        }  
     }
     i {
         margin-right: 10px;

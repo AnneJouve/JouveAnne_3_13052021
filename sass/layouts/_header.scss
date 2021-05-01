@@ -14,5 +14,25 @@
 .header-menu {
     &__return-arrow {
         @include return-arrow($display: block);
+        @include tablet-only {
+            top: 70px;
+        }
+        @include desktop-only {
+            top: 95px;
+        }
+        @include xl-desktop-only {
+            top: 125px;
+        }
+        & i {
+            @include tablet-only {
+                font-size: 1.5rem;
+            }
+            @include desktop-only {
+                font-size: 2rem;
+            }
+            @include xl-desktop-only {
+                font-size: 2.5rem;
+            }
+        }
     }
 }

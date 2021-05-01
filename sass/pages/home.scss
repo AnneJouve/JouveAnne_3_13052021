@@ -9,6 +9,9 @@
         &__text i {
         padding-right: 15px;
         }
+    @include xl-desktop-only {
+        border-radius: 20px 20px 0 0;
+    }
 }
 
 .section-presentation {
@@ -20,25 +23,45 @@
         font-size: 1.1rem;
         line-height: 1.3rem;
     }
+    @include xl-desktop-only {
+        border-radius: 0 0 20px 20px;
+    }
 }
 .section-fonctionnement {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     @include section($background: #FFF);
     &__heading {
-        @include section-heading;
+        margin-bottom: -20px;
+        @include tablet-only {
+            margin-bottom: -10px;
+        }
+        @include desktop-only {
+            margin-bottom: 0;
+        }
+        @include xl-desktop-only {
+            margin-bottom: 0;
+        }
     }
 }
 .choice-flex {
-    @include responsive(medium-device) {
+    @include tablet-only {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-        width: 100%;
-        align-items: flex-start;
+        align-items: center;
+    }
+    @include desktop-only {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include xl-desktop-only {
+        display: flex;
+        justify-content: space-between;
     }
 }
 .section-choice {
-    margin: -25px 0 20px 0;
+    width: 17rem;
+    margin: auto;
     &__number {
         font-size: 0.9rem;
         position: relative;
@@ -81,13 +104,34 @@
     &__heading {
         @include section-heading;
     }
-}
-.cards-flex {
-    @include responsive(medium-device) {
-        display: flex;
+    @include xl-desktop-only {
+        border-radius: 20px 20px 0 0;
     }
 }
+.cards-flex {
+    @include desktop-only {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+    & > a {
+        @include desktop-only {
+            width: 48%;
+        }
+    }
+    @include xl-desktop-only {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        }
+        & > a {
+            @include xl-desktop-only {
+                width: 48%;
+            }
+        }
+}
 .restaurant-card {
+    width: 100%;
     @include round-box-shadow;
     margin-bottom: 8%;
     transform: scale(1);
@@ -117,11 +161,11 @@
         font-weight: $font-medium;
         padding: 5px;
         border-radius: 0.3rem;
-        width: 35%;
+        width: 7rem;
         text-align: center;
-        position: relative;
-        top: 7%;
-        left: 62%;
+        position: absolute;
+        right: 0;
+        margin: 15px;
     }
     &__legend {
         display: flex;

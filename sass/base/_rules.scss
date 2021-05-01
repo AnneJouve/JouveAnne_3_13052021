@@ -11,6 +11,21 @@ body {
     font-weight: 100;
     line-height: 1.8;
     overflow-x: hidden;
+    /*max-width: map-get($breakpoints, mobile);*/
+    @include tablet-only {
+        min-width: map-get($breakpoints, mobile) +1px;
+        max-width: map-get($breakpoints, tablet);
+        overflow-x: hidden;
+    }
+    @include desktop-only {
+        min-width: map-get($breakpoints, tablet) +1px;
+        max-width: map-get($breakpoints, desktop);
+        overflow-x: hidden;
+    }
+    @include xl-desktop-only {
+        min-width: map-get($breakpoints, xl-desktop);
+        overflow-x: hidden;
+    }
 }
 
 a {
