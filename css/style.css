@@ -7,32 +7,35 @@
   text-decoration: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 100;
   line-height: 1.8;
   overflow-x: hidden;
-  /*max-width: map-get($breakpoints, mobile);*/
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   body {
     min-width: 768px;
     max-width: 991px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   body {
     min-width: 992px;
     max-width: 1199px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
   }
 }
 @media screen and (min-width: 1200px) {
   body {
     min-width: 1200px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
   }
 }
 
