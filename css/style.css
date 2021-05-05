@@ -665,6 +665,7 @@ a {
   width: 7rem;
   text-align: center;
   position: absolute;
+  z-index: 1;
   right: 0;
   margin: 15px;
 }
@@ -681,6 +682,25 @@ a {
 .restaurant-card__legend .icon {
   padding-right: 10%;
   font-size: 1.5rem;
+  position: relative;
+}
+.restaurant-card__legend .icon__1 {
+  position: relative;
+  z-index: 10;
+}
+.restaurant-card__legend .icon__1:hover + .icon__2 {
+  height: 100%;
+}
+.restaurant-card__legend .icon__2 {
+  background: linear-gradient(#FF79DA 5%, #9356DC 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  height: 0;
+  transition: all 300ms ease-in-out;
 }
 .restaurant-card__legend .bold {
   font-weight: 500;
