@@ -127,6 +127,16 @@ a {
   animation-delay: 900ms;
 }
 
+@keyframes card-in {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
 .header, .header-menu {
   margin: 8% 0 2% 0;
 }
@@ -244,6 +254,29 @@ a {
   margin-top: -10px;
 }
 
+.icon {
+  position: relative;
+}
+.icon__1 {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.icon__1:hover + .icon__2 {
+  height: 100%;
+}
+.icon__2 {
+  display: block;
+  background: linear-gradient(#FF79DA 5%, #9356DC 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: absolute;
+  top: 0;
+  height: 0;
+  transition: all 300ms ease-in-out;
+}
+
 @media screen and (min-width: 1200px) {
   .cards-menu-flex {
     display: flex;
@@ -251,6 +284,11 @@ a {
   }
 }
 
+.card-menu {
+  opacity: 0;
+  animation: card-in 500ms linear forwards;
+  animation-delay: 100ms;
+}
 .card-menu__heading {
   font-weight: 300;
   text-transform: uppercase;

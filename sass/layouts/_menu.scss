@@ -39,6 +39,28 @@
         margin-top: -10px;
     }
 }
+.icon {
+    position: relative;
+    &__1 {
+        display: block;
+        position: relative;
+        z-index: 10;
+        &:hover + .icon__2 {
+            height: 100%;
+        }
+    }
+    &__2 {
+        display: block;
+        background: linear-gradient($color-secondary 5%, $color-primary 95%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: absolute;
+        top: 0;
+        height: 0;
+        transition: all 300ms ease-in-out;
+    }
+}
 .cards-menu-flex {
     @include xl-desktop-only {
     display: flex;
@@ -46,6 +68,9 @@
     }
 }
 .card-menu {
+    opacity: 0;
+    animation: card-in 500ms linear forwards;
+    animation-delay: 100ms;
     &__heading {
         font-weight: $font-light;
         text-transform: uppercase;

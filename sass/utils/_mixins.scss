@@ -51,6 +51,22 @@
         height: 300px;
     }
 }
+@mixin icon {
+    padding-right: 10%;
+    font-size: 1.5rem;
+    position: relative;
+}
+@mixin heart {
+    background: linear-gradient($color-secondary 5%, $color-primary 95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    height: 0;
+    transition: all 300ms ease-in-out;
+}
 
 /*MEDIA QUERIES*/
 @mixin mobile-only {
