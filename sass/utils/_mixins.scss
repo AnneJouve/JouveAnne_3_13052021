@@ -1,7 +1,9 @@
 @mixin return-arrow($display: none) {
     font-size: 1.2rem;
     position: absolute;
+    z-index: 1;
     left: 8%;
+    top: 0;
     display: $display;
 }
 

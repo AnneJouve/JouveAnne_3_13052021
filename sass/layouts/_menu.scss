@@ -20,6 +20,7 @@
         }
     @include xl-desktop-only {
         height: 486px;
+        border-radius: 20px 20px 0;
         }
     }
 }
@@ -45,6 +46,9 @@
         display: block;
         position: relative;
         z-index: 10;
+        &:hover {
+            opacity: 0;
+        }
         &:hover + .icon__2 {
             height: 100%;
         }
@@ -68,9 +72,7 @@
     }
 }
 .card-menu {
-    opacity: 0;
     animation: card-in 500ms linear forwards;
-    animation-delay: 100ms;
     &__heading {
         font-weight: $font-light;
         text-transform: uppercase;
@@ -80,12 +82,21 @@
             border-bottom: 3px solid $color-tertiary;
         }
     }
+    @include xl-desktop-only {
+        width: 30%;
+    }
 }
 .card-menu-dish {
     @include round-box-shadow;
     background: #FFF;
     padding: 15px 20px 10px 10px;
     margin: 15px 0 15px 0;
+    animation: card-in 1500ms ease-in-out forwards;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation-delay: 300ms * $i;
+        }
+    }
     &__title {
         font-weight: $font-medium;
         font-size: 1.1rem;
@@ -95,6 +106,7 @@
         display: flex;
         justify-content: space-between;
         font-size: 0.9rem;
+        font-weight: $font-light;
     }
     &__price {
         font-weight: $font-medium;

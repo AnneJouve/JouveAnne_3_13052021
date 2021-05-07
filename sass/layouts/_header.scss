@@ -1,5 +1,6 @@
 .header, .header-menu {
     margin: 8% 0 2% 0;
+    position: relative;
     &__return-arrow {
         @include return-arrow;
     }
@@ -8,21 +9,18 @@
     }
     &__logo img {
         width: 45%;
+        @include desktop-only {
+            width: 40%;
+        }
+        @include xl-desktop-only {
+            width: 35%;
+        }
     }
 }
 
 .header-menu {
     &__return-arrow {
         @include return-arrow($display: block);
-        @include tablet-only {
-            top: 70px;
-        }
-        @include desktop-only {
-            top: 95px;
-        }
-        @include xl-desktop-only {
-            top: 125px;
-        }
         & i {
             @include tablet-only {
                 font-size: 1.5rem;

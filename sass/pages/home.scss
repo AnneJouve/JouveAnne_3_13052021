@@ -64,6 +64,7 @@
     margin: auto;
     &__number {
         font-size: 0.9rem;
+        line-height: 1.7rem;
         position: relative;
         background: $color-primary;
         border-radius: 50%;
@@ -172,6 +173,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-weight: $font-light;
         .text {
             font-size: 1.1rem;
             line-height: 1.6rem;
@@ -185,6 +187,9 @@
             &__1 {
                 position: relative;
                 z-index: 10;
+                &:hover {
+                    opacity: 0;
+                }
                 &:hover + .icon__2 {
                     height: 100%;
                 }

@@ -22,20 +22,17 @@ body {
   body {
     min-width: 768px;
     max-width: 991px;
-    /*overflow-x: hidden;*/
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   body {
     min-width: 992px;
     max-width: 1199px;
-    /*overflow-x: hidden;*/
   }
 }
 @media screen and (min-width: 1200px) {
   body {
     min-width: 1200px;
-    /*overflow-x: hidden;*/
   }
 }
 
@@ -130,20 +127,27 @@ a {
 @keyframes card-in {
   0% {
     opacity: 0;
-    top: 100px;
+    transform: translateY(10px);
   }
+  /*50% {
+    opacity: 1;
+    transform: translateY(5px);
+  }*/
   100% {
     opacity: 1;
-    top: 0px;
+    transform: translateY(0);
   }
 }
 .header, .header-menu {
   margin: 8% 0 2% 0;
+  position: relative;
 }
 .header__return-arrow, .header-menu__return-arrow {
   font-size: 1.2rem;
   position: absolute;
+  z-index: 1;
   left: 8%;
+  top: 0;
   display: none;
 }
 .header__logo, .header-menu__logo {
@@ -152,27 +156,24 @@ a {
 .header__logo img, .header-menu__logo img {
   width: 45%;
 }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .header__logo img, .header-menu__logo img {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo img, .header-menu__logo img {
+    width: 35%;
+  }
+}
 
 .header-menu__return-arrow {
   font-size: 1.2rem;
   position: absolute;
+  z-index: 1;
   left: 8%;
+  top: 0;
   display: block;
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .header-menu__return-arrow {
-    top: 70px;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .header-menu__return-arrow {
-    top: 95px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header-menu__return-arrow {
-    top: 125px;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .header-menu__return-arrow i {
@@ -222,6 +223,7 @@ a {
 @media screen and (min-width: 1200px) {
   .banner img {
     height: 486px;
+    border-radius: 20px 20px 0;
   }
 }
 
@@ -262,6 +264,9 @@ a {
   position: relative;
   z-index: 10;
 }
+.icon__1:hover {
+  opacity: 0;
+}
 .icon__1:hover + .icon__2 {
   height: 100%;
 }
@@ -285,9 +290,7 @@ a {
 }
 
 .card-menu {
-  opacity: 0;
   animation: card-in 500ms linear forwards;
-  animation-delay: 100ms;
 }
 .card-menu__heading {
   font-weight: 300;
@@ -298,6 +301,11 @@ a {
 .card-menu__heading--border {
   border-bottom: 3px solid #99E2D0;
 }
+@media screen and (min-width: 1200px) {
+  .card-menu {
+    width: 30%;
+  }
+}
 
 .card-menu-dish {
   border-radius: 20px;
@@ -305,6 +313,37 @@ a {
   background: #FFF;
   padding: 15px 20px 10px 10px;
   margin: 15px 0 15px 0;
+  animation: card-in 1500ms ease-in-out forwards;
+}
+.card-menu-dish--1 {
+  animation-delay: 300ms;
+}
+.card-menu-dish--2 {
+  animation-delay: 600ms;
+}
+.card-menu-dish--3 {
+  animation-delay: 900ms;
+}
+.card-menu-dish--4 {
+  animation-delay: 1200ms;
+}
+.card-menu-dish--5 {
+  animation-delay: 1500ms;
+}
+.card-menu-dish--6 {
+  animation-delay: 1800ms;
+}
+.card-menu-dish--7 {
+  animation-delay: 2100ms;
+}
+.card-menu-dish--8 {
+  animation-delay: 2400ms;
+}
+.card-menu-dish--9 {
+  animation-delay: 2700ms;
+}
+.card-menu-dish--10 {
+  animation-delay: 3000ms;
 }
 .card-menu-dish__title {
   font-weight: 500;
@@ -315,6 +354,7 @@ a {
   display: flex;
   justify-content: space-between;
   font-size: 0.9rem;
+  font-weight: 300;
 }
 .card-menu-dish__price {
   font-weight: 500;
@@ -505,6 +545,7 @@ a {
 }
 .section-choice__number {
   font-size: 0.9rem;
+  line-height: 1.7rem;
   position: relative;
   background: #9356DC;
   border-radius: 50%;
@@ -711,6 +752,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 300;
 }
 .restaurant-card__legend .text {
   font-size: 1.1rem;
@@ -725,6 +767,9 @@ a {
 .restaurant-card__legend .icon__1 {
   position: relative;
   z-index: 10;
+}
+.restaurant-card__legend .icon__1:hover {
+  opacity: 0;
 }
 .restaurant-card__legend .icon__1:hover + .icon__2 {
   height: 100%;
