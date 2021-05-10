@@ -66,13 +66,19 @@
     }
 }
 .cards-menu-flex {
-    @include xl-desktop-only {
+        @include xl-desktop-only {
     display: flex;
     justify-content: space-between;
     }
 }
 .card-menu {
-    animation: card-in 500ms linear forwards;
+    animation: card-in 1000ms ease-in-out forwards;
+    opacity: 0;
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            animation-delay: 300ms * $i;
+        }
+    }
     &__heading {
         font-weight: $font-light;
         text-transform: uppercase;

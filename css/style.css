@@ -129,10 +129,6 @@ a {
     opacity: 0;
     transform: translateY(10px);
   }
-  /*50% {
-    opacity: 1;
-    transform: translateY(5px);
-  }*/
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -290,7 +286,17 @@ a {
 }
 
 .card-menu {
-  animation: card-in 500ms linear forwards;
+  animation: card-in 1000ms ease-in-out forwards;
+  opacity: 0;
+}
+.card-menu--1 {
+  animation-delay: 300ms;
+}
+.card-menu--2 {
+  animation-delay: 600ms;
+}
+.card-menu--3 {
+  animation-delay: 900ms;
 }
 .card-menu__heading {
   font-weight: 300;
