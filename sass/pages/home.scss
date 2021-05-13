@@ -196,7 +196,7 @@
             }
             &__2 {
                 background: linear-gradient($color-secondary 5%, $color-primary 95%);
-                background-clip: text;
+                background-clip: content-box;
                 -webkit-background-clip: text;
                 color: transparent;
                 position: absolute;
