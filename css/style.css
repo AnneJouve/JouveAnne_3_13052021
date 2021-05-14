@@ -317,8 +317,10 @@ a {
   border-radius: 20px;
   box-shadow: 3px 3px 3px #D0D0D0;
   background: #FFF;
-  padding: 15px 20px 10px 10px;
   margin: 15px 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
   animation: card-in 1500ms ease-in-out forwards;
 }
 .card-menu-dish--1 {
@@ -351,6 +353,18 @@ a {
 .card-menu-dish--10 {
   animation-delay: 3000ms;
 }
+.card-menu-dish:hover > .card-menu-dish__checkbox {
+  transform: scaleX(1);
+  transform-origin: center right;
+  width: 6rem;
+}
+.card-menu-dish:hover > .card-menu-dish__checkbox > i {
+  transform: rotate(-1turn);
+}
+.card-menu-dish__infos {
+  width: 100%;
+  padding: 15px 20px 10px 10px;
+}
 .card-menu-dish__title {
   font-weight: 500;
   font-size: 1.1rem;
@@ -364,6 +378,24 @@ a {
 }
 .card-menu-dish__price {
   font-weight: 500;
+}
+.card-menu-dish__checkbox {
+  background: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  color: #fff;
+  width: 0;
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
+  transform-origin: center right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.card-menu-dish__checkbox i {
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
 }
 
 .footer, .footer-menu {

@@ -95,13 +95,27 @@
 .card-menu-dish {
     @include round-box-shadow;
     background: #FFF;
-    padding: 15px 20px 10px 10px;
     margin: 15px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
     animation: card-in 1500ms ease-in-out forwards;
     @for $i from 1 through 10 {
         &--#{$i} {
             animation-delay: 300ms * $i;
         }
+    }
+    &:hover > .card-menu-dish__checkbox {
+        transform: scaleX(1);
+        transform-origin: center right;
+        width: 6rem;
+        & > i {
+            transform: rotate(-1turn);
+        }
+    }
+    &__infos {
+        width: 100%;
+        padding: 15px 20px 10px 10px;
     }
     &__title {
         font-weight: $font-medium;
@@ -116,5 +130,23 @@
     }
     &__price {
         font-weight: $font-medium;
+    }
+    &__checkbox {
+        background: $color-tertiary;
+        border-radius: 0 20px 20px 0;
+        color: #fff;
+        width: 0;
+        transform: scaleX(0);
+        transition: transform 500ms ease-in-out;
+        transform-origin: center right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        i {
+            transform: rotate(1turn);
+            transition: transform 500ms ease-in-out;
+        }
     }
 }
