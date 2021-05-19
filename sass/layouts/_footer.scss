@@ -11,19 +11,13 @@
     ul {
         list-style-type: none;
         @include tablet-only {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            @include flex-row-wrap-spaceb;
         }
         @include desktop-only {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            @include flex-row-wrap-spaceb;
         }
         @include xl-desktop-only {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            @include flex-row-wrap-spaceb;
         } 
     }
     a {

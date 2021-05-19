@@ -4,7 +4,7 @@
     background: linear-gradient(#cfcfcf 2%, #eaeaea 20%);
     &__text {
         color: rgba(0, 0, 0, 0.7);
-        font-weight: 500;
+        font-weight: $font-medium;
         }
         &__text i {
         padding-right: 15px;
@@ -111,9 +111,7 @@
 }
 .cards-flex {
     @include desktop-only {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    @include flex-row-wrap-spaceb;
     }
     & > a {
         @include desktop-only {
@@ -121,9 +119,7 @@
         }
     }
     @include xl-desktop-only {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        @include flex-row-wrap-spaceb;
         }
         & > a {
             @include xl-desktop-only {

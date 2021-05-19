@@ -1,3 +1,8 @@
+@mixin flex-row-wrap-spaceb {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
 @mixin return-arrow($display: none) {
     font-size: 1.2rem;
     position: absolute;
